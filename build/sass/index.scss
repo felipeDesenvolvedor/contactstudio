@@ -1,6 +1,7 @@
 * {
     margin:0;
     padding:0;
+    font-family: 'Roboto', sans-serif;
 }
 
 :root {
@@ -14,7 +15,7 @@
         gap: 35px;
         margin: 16px;
 
-        @media (min-width:425px) {
+        @media (min-width:768px) {
             grid-template-columns: auto auto;
         }
 
@@ -50,5 +51,34 @@
     .logo {
         max-width: 100%;
         height: auto;
+    }
+}
+
+.posts__container,
+.form__container {
+    
+    @media (min-width:320px) {
+        width: 300px;
+        margin:0 auto;
+    }
+
+    @media (min-width:425px) {
+        width: 400px;
+        margin:0 auto;
+    }
+
+    @media (min-width:768px) {
+        width: 700px;
+        margin:0 auto;
+    }
+    
+    @media (min-width:990px) {
+        width: 990px;
+        margin:0 auto;
+    }
+
+    @media (min-width:1200px) {
+        width: 1200px;
+        margin:0 auto;
     }
 }
