@@ -8,6 +8,14 @@
     --blue-default:#7ecdc9;
 }
 
+body {
+    background-color: #f1f0eb;
+}
+
+main {
+    padding: 20px;
+}
+
 .posts{
     &__container {
         display: grid;
@@ -51,6 +59,7 @@
     .logo {
         max-width: 100%;
         height: auto;
+        padding: 20px;
     }
 }
 
@@ -80,5 +89,41 @@
     @media (min-width:1200px) {
         width: 1200px;
         margin:0 auto;
+    }
+}
+
+.form {
+    &__container {
+        margin-bottom:20px;
+    }
+
+    &__search {
+        display: flex;
+    }
+
+    &__button {
+        border: none;
+        background: #8c8c8c;
+        height: 25px;
+        border-top-right-radius:3px;
+        border-bottom-right-radius:3px;
+
+        svg {
+            height: 25px;
+            fill:#fff;
+        }
+    }
+
+    &__input__idUser { 
+            background-color: #8c8c8c;
+            border: none;
+            padding: 5px;
+            color: #fff;
+            border-top-left-radius:3px;
+            border-bottom-left-radius:3px;
+
+            &::placeholder {
+                color:#fff;
+            }
     }
 }
