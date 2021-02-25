@@ -1,6 +1,3 @@
-# Contact Studio
-
-
 <h1>Contact Studio Artigos </h1>
 
 <p>Para Testar o projeto desenvolvido, basta seguir os seguintes passos.</p>
