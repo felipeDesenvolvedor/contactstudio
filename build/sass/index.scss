@@ -1,0 +1,23 @@
+.posts__container {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 35px;
+    margin: 16px;
+
+    @media (min-width:425px) {
+        grid-template-columns: auto auto;
+    }
+
+    @media (min-width:990px) {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+.top__logo__container {
+    text-align: center;
+
+    .logo {
+        max-width: 100%;
+        height: auto;
+    }
+}
