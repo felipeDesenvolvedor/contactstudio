@@ -1,1 +1,1 @@
-"use strict";var postsUser=function(){return fetch("https://jsonplaceholder.typicode.com/posts?userId=1").then(function(t){return t.json()}).then(function(t){return t})};
+"use strict";var postsUser=function(t){return fetch("https://jsonplaceholder.typicode.com/posts?userId=".concat(t)).then(function(t){return t.json()}).then(function(t){return t})};

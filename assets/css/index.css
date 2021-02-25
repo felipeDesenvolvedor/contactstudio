@@ -1,0 +1,6 @@
+.posts__container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 35px;
+    margin: 16px;
+}
