@@ -1,15 +1,46 @@
-.posts__container {
-    display: grid;
-    grid-template-columns: auto;
-    gap: 35px;
-    margin: 16px;
+* {
+    margin:0;
+    padding:0;
+}
 
-    @media (min-width:425px) {
-        grid-template-columns: auto auto;
-    }
+:root {
+    --blue-default:#7ecdc9;
+}
 
-    @media (min-width:990px) {
-        grid-template-columns: auto auto auto;
+.posts{
+    &__container {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 35px;
+        margin: 16px;
+
+        @media (min-width:425px) {
+            grid-template-columns: auto auto;
+        }
+
+        @media (min-width:990px) {
+            grid-template-columns: auto auto auto;
+        }
+     
+        .post {
+            &__readmore {
+                padding: 0 10px;
+                display: inline-block;
+                margin-left:10px;
+                color: var(--blue-default); 
+            }
+
+            &__body {
+                display: inline;
+
+                &::after {
+                    content:'...';
+                    display: inline-block;
+                    height: 2px;
+                    width: 3px;
+                }
+            }
+        }
     }
 }
 

@@ -1,12 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
     showPostsUser(1);
     searchPostsClickButton();
-    searchPostsInput();
+    // searchPostsInput();
 });
 
 const showPostsUser = userId => {
     const postsContainer = document.querySelector(".posts__container");
           postsContainer.innerHTML = "";
+
+    if(!postsContainer) {
+        return;
+    }      
 
     postsUser(userId).then(posts => {
 
