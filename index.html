@@ -8,10 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/index.css" />
     
-    <title>Document</title>
+    <title>Contact Studio</title>
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
        <div class="top__logo__container">
            <a href="/"><img class="logo" src="/img/logo.png"> </a>
        </div>
@@ -28,10 +28,19 @@
             </form>
         </section>
 
-        <section class="posts__container">
+        <section class="posts__container" id="posts__container">
         </section>
 
-        <footer></footer>
+        <footer class="footer">
+            <div class="footer__container">
+                <a href="/"><img class="footer__logo" src="/img/logo.png"> </a>
+
+                <ul class="footer__lista">
+                    <li><a href="#header">Topo</a></li>
+                    <li><a href="#posts__container">Artigos</a></li>
+                </ul>
+            </div>
+        </footer>
     </main>
 </body>
     <script src="/js/fetchForApi.js"></script>

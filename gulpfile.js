@@ -4,7 +4,7 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     babel = require("gulp-babel");
 
-var saaspath  = "build/sass/*.scss";    
+var saaspath  = "build/sass/**/*.scss";    
 var jspathEs6 = "build/js/*.js";
 var csspath   = "assets/css";
 var jspath    = "assets/js";

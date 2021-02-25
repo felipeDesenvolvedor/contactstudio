@@ -3,6 +3,7 @@ var app = express();
 var path = require('path');
 
 app.use(express.static('assets'));
+app.use(express.static('assets/css/posts'));
 
 // viewed at http://localhost:8080
 app.get('/', function(req, res) {
