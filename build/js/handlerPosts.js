@@ -14,9 +14,12 @@ const showPostsUser = userId => {
 
     postsUser(userId).then(posts => {
 
-        posts.forEach(({title, body}) => {
-            listPosts({"title":title, "body":body});
+        posts.forEach(({id, title, body}) => {
+            
+            listPosts({"idPost":id, "title":title, "body":body});
         });
+
+        openPost();
     }); 
 }
 
@@ -45,4 +48,16 @@ const searchPostsInput = () => {
              showPostsUser(1); 
          }
     });
+}
+
+const openPost = () => {
+    const readMore = document.querySelectorAll('.post__readmore');
+    
+    readMore.forEach(element => {
+        element.addEventListener('click', () => {
+            localStorage.clear();
+            localStorage.setItem(`idpost`, element.dataset.idpost);
+            location.pathname = `/posts`;
+        });
+    });  
 }

@@ -7,3 +7,13 @@ const postsUser = userId => {
        return json;
     });
 }
+
+const postId = postId => {
+    return fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
+    .then(response => {
+        return response.json();
+    })
+    .then(json => {
+       return json;
+    });
+}

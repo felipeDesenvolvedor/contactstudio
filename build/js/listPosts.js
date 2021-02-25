@@ -1,4 +1,4 @@
-const listPosts = ({title, body}) => {
+const listPosts = ({idPost, title, body}) => {
     const postsContainer = document.querySelector(".posts__container");
     
     const titleElement = document.createElement('h3');
@@ -11,6 +11,7 @@ const listPosts = ({title, body}) => {
 
     const readyMore = document.createElement('span');
           readyMore.classList.add('post__readmore');
+          readyMore.setAttribute(`data-idpost`, idPost);
           readyMore.textContent = 'read more';
           
     const postItem = document.createElement('article');
