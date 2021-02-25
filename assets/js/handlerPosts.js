@@ -1,0 +1,1 @@
+"use strict";document.addEventListener("DOMContentLoaded",function(){showPostsUser()});var showPostsUser=function(){postsUser().then(function(t){t.forEach(function(t){var s=t.title,o=t.body;listPosts({title:s,body:o})})})};
