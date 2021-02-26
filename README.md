@@ -1,6 +1,6 @@
 <h1>Contact Studio Artigos </h1>
 
-<p>Tecnologias utilizadas</p>
+<h3>Tecnologias utilizadas</h3>
 
 <ul>
   <li>HTML5 semântico</li>
@@ -10,7 +10,7 @@
   <li>Node.js para entrega de paginas e assets</li>
 </ul>   
 
-<p>Para Testar o projeto desenvolvido, basta seguir os seguintes passos.</p>
+<h3>Para Testar o projeto desenvolvido, basta seguir os seguintes passos.</h3>
 
 <ul>
   <li>Clonar o projeto</li>
