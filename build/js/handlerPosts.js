@@ -3,22 +3,44 @@ document.addEventListener('DOMContentLoaded', () => {
     searchPostsClickButton();
 });
 
+const validadeInput = message => {
+    const formContainer = document.querySelector('.form__container');
+
+    let validate = {
+        "inputempty":"inputempty",
+        "notfounduser":"notfounduser",
+        "valueinvalid":"valueinvalid"
+    }
+
+    formContainer.classList.add(`form__container--${validate[message]}`);
+
+    setTimeout(() => {
+        formContainer.classList.remove(`form__container--${validate[message]}`);
+    }, 2000)
+}
+
 const showPostsUser = userId => {
     const postsContainer = document.querySelector(".posts__container");
-          postsContainer.innerHTML = "";
-
+   
     if(!postsContainer) {
         return;
     }      
 
     postsUser(userId).then(posts => {
 
-        posts.forEach(({id, title, body}) => {
-            
-            listPosts({"idPost":id, "title":title, "body":body});
-        });
+        if(posts.length) {
+            postsContainer.innerHTML = "";
 
-        openPost();
+            posts.forEach(({id, title, body}) => {
+            
+                listPosts({"idPost":id, "title":title, "body":body});
+            });
+    
+            openPost();
+            return;
+        }
+
+        validadeInput('notfounduser');
     }); 
 }
 
@@ -31,7 +53,11 @@ const searchPostsClickButton = () => {
 
     button.addEventListener('click', () => {
         if(!input.value) {
+            validadeInput('inputempty');
             return; 
+         } else if (input.value < 0) {
+            validadeInput('valueinvalid');
+            return;
          }
             
         let userIdValue = input.value;

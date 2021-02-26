@@ -111,6 +111,35 @@ main {
 .form {
     &__container {
         margin-bottom:20px;
+
+        &--inputempty::after,
+        &--notfounduser::after,
+        &--valueinvalid::after {
+            display: inline-block;
+            margin-top: 5px;
+            color:red;
+            opacity: 0;
+            visibility: hidden;
+            transition:opacity 400ms;
+        }
+
+        &--inputempty::after {
+            content:'O id do usuário é obrigatório';
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &--notfounduser::after {
+            content:'Usuário não encontrado';
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &--valueinvalid::after {
+            content:'Valor inválido, digite numeros acima de zero';
+            opacity: 1;
+            visibility: visible;
+        }
     }
 
     &__search {
